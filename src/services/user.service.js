@@ -10,7 +10,7 @@ class UserService {
 
   async getData() {
     const data = UserQuery;
-    const resData = await this.http.post(data);
+    const resData = await this._http.post(data);
     return _.get(resData, 'data.viewer')
   }
 }
