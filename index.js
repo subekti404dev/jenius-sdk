@@ -22,9 +22,9 @@ class JeniusSDK {
     refreshToken: null,
     idToken: null
   }
-  constructor(userId = null, deviceId = null) {
+  constructor(userId = null, device = null) {
     this._userId = userId;
-    this._device = deviceId;
+    this._device = device;
   }
 
   get setup() {
