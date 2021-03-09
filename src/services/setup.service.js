@@ -44,15 +44,13 @@ class SetupService {
         if (data['uid']) userId = data['uid'];
       }
 
-      const data = token = {
+      return {
         userId,
         device,
         accessToken: addDeviceData.access_token,
         refreshToken: addDeviceData.refresh_token,
         idToken: addDeviceData.id_token,
       }
-      return data;
-
     } catch (error) {
       throw (
         _.get(error, "response.data") ||
